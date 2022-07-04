@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="javascript/main2.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="tituloPri">Cine Montevideo</h1>
+        <h3 class="tituloPri">Eliga su pelicula:</h3>
+        <nav>
+            <ul>
+                <button id="reg" onclick="crearUsuario()">Registrarse</button>
+                <button id="ini" onclick="iniciarSesion()">Iniciar Sesion</button>
+            </ul>
+        </nav>
+            <section id="modal"></section>
+        <section id="modal"></section>
+    </header>
+    <main class="contPrinc">
+        <div class="divsPeli">
+            <img class="imgPeli" src="images/peli1.jpg" alt="Dog">
+            <button id="btn1">Comprar</button>
+        </div>
+        <div class="divsPeli">
+            <img class="imgPeli" src="images/peli2.jpg" alt="Doctor">
+            <button id="btn2">Comprar</button>
+        </div>
+        <div class="divsPeli">
+            <img class="imgPeli" src="images/peli3.jpg" alt="Star Wars">
+            <button id="btn3">Comprar</button>
+        </div>
+    </main>
+    <h3>Eliga su snack y bebida:</h3>
+    <div class="div2">
+        <section class="input">
+            <p class="pInput">-POP -POP GRANDE:</p>
+            <input type="text" name="input1">
+            <p class="pInput">-REFRESCO -REFRESCO GRANDE:</p>
+            <input type="text" name="input2">
+            <p class="pInput">CANTIDAD:</p>
+            <input type="number" name="input3" id="">
+            <div><button onclick="hacerPedido()" id="btn">Agregar</button></div>
+        </section>
+    </div>
+    <article class="movies">
+    </article>
+</body>
+
+</html>
