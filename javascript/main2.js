@@ -21,6 +21,17 @@ cerrarModal = () => {
     modal.classList.remove("modal")
 }
 
+bienvenida = () => {
+    reg.style.display = "none"
+    ini.style.display = "none"
+    Swal.fire(
+        'Hola!',
+        'Te damos la Bienvenida',
+        'success'
+    )
+    cerrarModal()
+}
+
 crearUsuario = () => {
     modal.classList.add("modal")
     modal.innerHTML = `<div class="modal-container"><div class="modal-header"><h2>Crear Usuario</h2></div><div class="modal-body"><div><label for="nombre">Nombre</label><input type="text" id="nombre" placeholder="Nombre"></div><div><label for="edad">Edad</label><input type="number" id="edad" placeholder="Edad"></div><div><label for="email">Email</label><input type="email" id="email" placeholder="Email"></div><div><label for="contraseña">Constraseña</label><input type="password" id="password" placeholder="Contraseña"></div></div><div class="modal-footer"><button type="button" onclick="crearUsuario2()">Crear</button><button type="button" onclick="cerrarModal()">Cerrar</button></div></div>`
@@ -33,6 +44,11 @@ crearUsuario2 = () => {
     let password = document.querySelector("#password").value
     let usuario = new Usuario(nombre, edad, email, password)
     localStorage.setItem('usuario', JSON.stringify(usuario))
+    Swal.fire(
+        'Excelente!',
+        'Usuario creado con éxito',
+        'success'
+    )
     cerrarModal()
 }
 
@@ -46,9 +62,12 @@ iniciarSesion2 = () => {
     let password = document.querySelector("#password").value
     let usuario = JSON.parse(localStorage.getItem('usuario'))
     if (usuario.email === email && usuario.password === password) {
-        alert("Bienvenido/a al cine")
+        bienvenida()
     } else {
-        alert("El ususario no existe o esta mal ingresado")
+        Swal.fire(
+            'Error',
+            'Email o contraseña incorrecto',
+            'error')
     }
     cerrarModal()
 
