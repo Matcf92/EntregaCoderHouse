@@ -88,13 +88,24 @@ boton3.addEventListener("click", () => {
     console.log("Imprimiendo entrada para: Star Wars")
 });
 
+const boton4 = document.getElementById("btn4");
+boton4.addEventListener("click", () => {
+    botonPeliculas();
+});
+
 function hacerPedido() {
     let comida = input1.value
     let bebida = input2.value
     let cantidad = input3.value
     const div = document.createElement("div")
     div.className = "pelis peli" + count
-    div.innerHTML= `<div><h4>${comida}</h4><p>${bebida}</p><p>${cantidad}</p>`
+    div.innerHTML = `<div><h4>${comida}</h4><p>${bebida}</p><p>${cantidad}</p>`
     arti.appendChild(div)
     count++
+}
+
+function botonPeliculas(){
+    fetch("../data/data.json")
+    .then((res)=>res.json())
+    .then((json)=>console.log(json))
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "pelicula": "Lord of the rings",
+        "id": 1,
+        "descripcion": "Un grupo de amigos es el encargado de devolver un anillo maligo al volcan de donde salio."
+    },
+    {
+        "pelicula": "The italian job",
+        "id": 2,
+        "descripcion": "3 conductores de auto que vuelan."
+    },
+    {
+        "pelicula": "Jackass",
+        "id": 3,
+        "descripcion": "UN grupo de jackass que hacen prueban extremas mientras son filmados."
+    }
+]
