@@ -134,9 +134,9 @@ function hacerPedido() {
     let cantidad = input3.value
     const div = document.createElement("div")
     div.className = "pelis peli" + count
-    div.innerHTML = `<div><h4>${comida}</h4><p>${bebida}</p><p>${cantidad}</p>`
     arti.appendChild(div)
     count++
+    div.innerHTML = `<div><h4>${comida}</h4><p>${bebida}</p><p>${cantidad}</p></div>`
 }
 
 let pagina = 1;
